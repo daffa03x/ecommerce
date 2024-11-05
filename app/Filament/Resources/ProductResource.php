@@ -37,6 +37,7 @@ class ProductResource extends Resource
                 ->options([
                     'unpublished' => 'Unpublished',
                     'published' => 'Published',
+                    'stockout' => 'Stockout',
                 ])
                 ->required(),
                 Forms\Components\Textarea::make('description')
@@ -69,6 +70,7 @@ class ProductResource extends Resource
                 ->color(fn (string $state): string => match ($state) {
                     'published' => 'success',
                     'unpublished' => 'danger',
+                    'stockout' => 'warning',
                 })
                 ->sortable(),
             ])
