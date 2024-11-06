@@ -36,7 +36,8 @@
                                     <h3 class="card-title fs-6 fw-normal m-0">
                                         <a href="#">{{ $product->name_product }}</a>
                                     </h3>
-                                    <span class="card-price fw-bold">{{ $product->price }}</span>
+                                    <span class="card-price fw-bold">Rp
+                                        {{ number_format($product->price, 0, ',', '.') }}</span>
                                 </div>
                             </div>
                         </div>

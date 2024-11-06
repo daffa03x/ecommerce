@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->decimal('total',10,2);
-            $table->enum('status', ['pending','paid','cancelled']);
+            $table->enum('status', ['pending','success','failed']);
+            $table->string('snaps_token')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

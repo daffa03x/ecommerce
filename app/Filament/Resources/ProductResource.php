@@ -35,9 +35,8 @@ class ProductResource extends Resource
                 ->required(),
                 Select::make('status')
                 ->options([
-                    'unpublished' => 'Unpublished',
-                    'published' => 'Published',
-                    'stockout' => 'Stockout',
+                    'unavailable' => 'Unavailable',
+                    'available' => 'Available',
                 ])
                 ->required(),
                 Forms\Components\Textarea::make('description')
@@ -68,9 +67,8 @@ class ProductResource extends Resource
                 Tables\Columns\TextColumn::make('status')
                 ->badge()
                 ->color(fn (string $state): string => match ($state) {
-                    'published' => 'success',
-                    'unpublished' => 'danger',
-                    'stockout' => 'warning',
+                    'available' => 'success',
+                    'unavailable' => 'danger',
                 })
                 ->sortable(),
             ])
