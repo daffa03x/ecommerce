@@ -10,7 +10,6 @@
                     <th>Image</th>
                     <th>Product Name</th>
                     <th>Price</th>
-                    <th>Stock</th>
                     <th>Quantity</th>
                     <th>Subtotal</th>
                     <th>Action</th>
@@ -61,7 +60,6 @@
                         <td><img src="${item.image}" alt="${item.name}" class="img-fluid" style="width: 80px;"></td>
                         <td>${item.name}</td>
                         <td>Rp ${item.price.toLocaleString()}</td>
-                        <td>${item.stock}</td>
                         <td>
                             <input type="number" value="${item.quantity}" min="1" max="${item.stock}" class="form-control quantity-input" data-index="${index}">
                         </td>
